@@ -146,7 +146,7 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	$$\exists \delta = \delta (x_{0}) > 0: \begin{gathered}
 		f(x) \leq f(x_{0}) \ \forall x \in U_{\delta}(x_{0}) \cap X\\
 		\Bigl( f(x) \geq f(x_{0}) \ \forall x \in U_{\delta}(x_{0}) \cap X\Bigr) 
-		\end{gathered}$$
+	\end{gathered}$$
 \end{definition}
 
 \begin{definition}
@@ -163,12 +163,12 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	Пусть $f: [a, b] \mapsto \R$. Пусть $x_{0}$~---~ точка локального минимума (локального максимума).
 	
 	Тогда, если $ \begin{gathered}
-		\exists f'_{+} (x_{0}),$ то $ f'_{+} (x_{0}) \geq 0 \\
-		\exists f'_{-} (x_{0}),$ то $ f'_{-} (x_{0}) \leq 0 \\
+		\exists f'_{+} (x_{0}), \textrm{то}  f'_{+} (x_{0}) \geq 0 \\
+		\exists f'_{-} (x_{0}), \textrm{то}  f'_{-} (x_{0}) \leq 0 \\
 		\left(
 		\begin{gathered}
-			\exists f'_{+} (x_{0}),$ то $ f'_{+} (x_{0}) \leq 0 \\
-			\exists f'_{-} (x_{0}),$ то $ f'_{-} (x_{0}) \geq 0			
+			\exists f'_{+} (x_{0}), \textrm{то} f'_{+} (x_{0}) \leq 0 \\
+			\exists f'_{-} (x_{0}), \textrm{то} f'_{-} (x_{0}) \geq 0			
 		\end{gathered}
 		\right)
 	\end{gathered}$
@@ -178,48 +178,48 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	
 	\sidefig(10 cm)(7 cm)	
 	{\begin{flushleft}
-		
-		Докажем для случая, когда $x_{0}$~---~ точка локального минимума, так как для локального максимума доказательство аналогично.	
-		
-		Пусь $ \exists f'_{+}(x_{0}) \Rightarrow \exists \lim\limits_{x\to x_{0}+0} \cfrac{f(x)-f(x_{0})}{x - x_{0}}$
-		
-		Так как $x_{0}$~---~ локальный максимум, то
-		
-		$$\exists \delta > 0: \ f(x)\geq f(x_{0}) \quad \forall x\in U_{\delta}(x_{0}) \cap [a,b]$$
-		
-		А так как берется правсторонний предел, то $x>x_{0}$. Следовательно,
-		$\forall x \in \mathring{U}^{+}_{\delta} (x_{0}) \cap [a, b] \hookrightarrow \cfrac{f(x)-f(x_{0})}{x-x_{0}} \geq 0 
-		$
 			
-	\end{flushleft}
+			Докажем для случая, когда $x_{0}$~---~ точка локального минимума, так как для локального максимума доказательство аналогично.	
+			
+			Пусь $ \exists f'_{+}(x_{0}) \Rightarrow \exists \lim\limits_{x\to x_{0}+0} \cfrac{f(x)-f(x_{0})}{x - x_{0}}$
+			
+			Так как $x_{0}$~---~ локальный максимум, то
+			
+			$$\exists \delta > 0: \ f(x)\geq f(x_{0}) \quad \forall x\in U_{\delta}(x_{0}) \cap [a,b]$$
+			
+			А так как берется правсторонний предел, то $x>x_{0}$. Следовательно,
+			$\forall x \in \mathring{U}^{+}_{\delta} (x_{0}) \cap [a, b] \hookrightarrow \cfrac{f(x)-f(x_{0})}{x-x_{0}} \geq 0 
+			$
+			
+		\end{flushleft}
 	}
 	{
-	\begin{tikzpicture}
-		% Рисуем сетку
-		\draw[help lines, step=0.25, dotted]
-		(0,0) grid (4.5,4);
-		% Начало координат
-		\draw[->, thin] (0,0) -- (4.55,0)
-		node[below] {$x$}; % Ox
-		\draw[->, thin] (0,0) -- (0, 4.05)
-		node[left] {$y$}; % Oy
-		
-		\draw[line width =.05cm](1, 3.5) parabola bend (2.5, 1.5)(4, 2.5);
-		
-		\draw[line width =.03cm] (1, 3) -- (2.5, 1);
-		\draw[line width =.03cm] (2.6, 1) -- (4.1, 2.5);
-				
-		\draw[dotted, line width =.03cm] (2.5, 0) -- (2.5, 1.5);
-		\draw[dotted, line width =.03cm] (1, 0) -- (1, 3);
-		\draw[dotted, line width =.03cm] (4, 0) -- (4, 2.5);
-		
-		\node[below] at (1, 0) {$a$};
-		\node[below] at (2.5, 0) {$x_{0}$};
-		\node[below] at (4, 0) {$b$};
-		
-		\draw[thin] (1, -0.1) -- (1, 0.1);
-		\draw[thin] (4, -0.1) -- (4, 0.1);
-	\end{tikzpicture}
+		\begin{tikzpicture}
+			% Рисуем сетку
+			\draw[help lines, step=0.25, dotted]
+			(0,0) grid (4.5,4);
+			% Начало координат
+			\draw[->, thin] (0,0) -- (4.55,0)
+			node[below] {$x$}; % Ox
+			\draw[->, thin] (0,0) -- (0, 4.05)
+			node[left] {$y$}; % Oy
+			
+			\draw[line width =.05cm](1, 3.5) parabola bend (2.5, 1.5)(4, 2.5);
+			
+			\draw[line width =.03cm] (1, 3) -- (2.5, 1);
+			\draw[line width =.03cm] (2.6, 1) -- (4.1, 2.5);
+			
+			\draw[dotted, line width =.03cm] (2.5, 0) -- (2.5, 1.5);
+			\draw[dotted, line width =.03cm] (1, 0) -- (1, 3);
+			\draw[dotted, line width =.03cm] (4, 0) -- (4, 2.5);
+			
+			\node[below] at (1, 0) {$a$};
+			\node[below] at (2.5, 0) {$x_{0}$};
+			\node[below] at (4, 0) {$b$};
+			
+			\draw[thin] (1, -0.1) -- (1, 0.1);
+			\draw[thin] (4, -0.1) -- (4, 0.1);
+		\end{tikzpicture}
 	}
 	
 	Следовательно, делая \hyperlink{thm4.8}{предельный переход в неравенстве}, получим $f'_{+} \geq 0$
@@ -286,16 +286,16 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	
 	$h \in C([a,b])$ и дифференцируема на интервале $(a, b)$. По \hyperlink{thrm6.2}{теореме Ролля} $$\exists \xi \in (a, b): h'(\xi) = 0$$
 	
-	 $h'(\xi) = f'(\xi) - k g'(\xi) = 0 \Rightarrow k = \cfrac{f'(\xi)}{g'(\xi)} \Rightarrow \cfrac{f(b)-f(a)}{g(b)-g(a)}= \cfrac{f'(\xi)}{g'(\xi)}$
+	$h'(\xi) = f'(\xi) - k g'(\xi) = 0 \Rightarrow k = \cfrac{f'(\xi)}{g'(\xi)} \Rightarrow \cfrac{f(b)-f(a)}{g(b)-g(a)}= \cfrac{f'(\xi)}{g'(\xi)}$
 \end{proof}
 
 
-	\sidefig(10 cm)(7 cm)	
+\sidefig(10 cm)(7 cm)	
 {\begin{flushleft}
 		Предположим, что на малом интервале $x(t)$ обратима и удволетворяет условиям \hyperlink{thrm4.19}{теоремы об обратной функции}
 		$$
 		\begin{gathered}
-					x = x(t) \\
+			x = x(t) \\
 			y = y(t)
 		\end{gathered} \quad \quad
 		y'(x) = \cfrac{y'(t)}{x'(t)}\Bigg|_{t = t(x)}
@@ -403,8 +403,8 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 		f'_{+}(x_{M}) \leq 0\\
 		f'_{-}(x_{M}) \geq 0
 	\end{cases}$. То есть точка максимума $\begin{cases}
-	x_{M} \neq x,\\
-	x_{M} \neq y.
+		x_{M} \neq x,\\
+		x_{M} \neq y.
 	\end{cases}$
 	
 	Следовательно, \hyperlink{thrm6.1}{по теореме Ферма} $f'(x_{M}) = 0.$
@@ -439,7 +439,7 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	Тогда положим $x_{c} = \xi$
 \end{proof}
 
-\section{Формула Тейлора}
+\subsection{Формула Тейлора}
 
 \begin{definition}
 	Пусть $n \in \N_{0},$ $f: U_{\delta}(x_{0})\mapsto \R$ имеет n-ую (конечную) производную в точке $x_{0}$. Тогда \textit{полиномом (многочленом) Тейлора функции $f$ с центром в точке $x_{0}$} называется
@@ -456,14 +456,14 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 \begin{lemma}
 	$\phi_{n}(x) = (x-x_{0})^{n}$ Тогда 
 	\begin{enumerate} 
-	 	\item[a)] $\forall k \in \{0, \ldots, n\} \hookrightarrow \phi_{n}^{(k)} = n(n-1)\ldots (x-k+1)(x-x_{0})^{n-k}, $
-	 	
-	 	$ \forall k> n \hookrightarrow \phi_{n}^{(k)}(x) \equiv 0$
-	 	\item[b)] $\phi_{n}^{(k)}(x_{0}) = \begin{cases}
-	 		0, k \neq n\\
-	 		n!, k =n
-	 	\end{cases}$
-	 \end{enumerate}
+		\item[a)] $\forall k \in \{0, \ldots, n\} \hookrightarrow \phi_{n}^{(k)} = n(n-1)\ldots (x-k+1)(x-x_{0})^{n-k}, $
+		
+		$ \forall k> n \hookrightarrow \phi_{n}^{(k)}(x) \equiv 0$
+		\item[b)] $\phi_{n}^{(k)}(x_{0}) = \begin{cases}
+			0, k \neq n\\
+			n!, k =n
+		\end{cases}$
+	\end{enumerate}
 \end{lemma}
 \begin{proof}
 	Пункт b) сразу следует из пункта  a)
@@ -495,12 +495,12 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	\hypertarget{thrm7.1}{(Формула Тейлора с остаточным членом в форме Пеано)} Путь $f$ дифференцируемо в точке $x_{0} \ n$ раз, $n \in \N_{0.}$ Тогда 
 	
 	$$f(x) = \sum\limits_{k = 0}^n \cfrac{f^{(k)}}{k!}(x-x_{0})^{k} + o\Bigl( (x-x_{0})^{n} \Bigr), x \to x_{0}$$
-\begin{note}
-	Запись $x\to x_{0}$ означает, что равенство справедливо в некоторой окрестности $U_{\delta}(x_{0})$
+	\begin{note}
+		Запись $x\to x_{0}$ означает, что равенство справедливо в некоторой окрестности $U_{\delta}(x_{0})$
+		
+		$o\Bigl( (x-x_{0})^{n} \Bigr)$~---~ это <<функция>>, предстваимая в виде $$\epsilon_{x_{0}}[f](x)(x-x_{0})^{n}, \ \textrm{где} \ \epsilon_{x_{0}}[f](x) \to 0, x\to x_{0}.$$
+	\end{note}	
 	
-	$o\Bigl( (x-x_{0})^{n} \Bigr)$~---~ это <<функция>>, предстваимая в виде $$\epsilon_{x_{0}}[f](x)(x-x_{0})^{n}, \ \textrm{где} \ \epsilon_{x_{0}}[f](x) \to 0, x\to x_{0}.$$
-\end{note}	
-
 \end{theorem}
 \begin{proof}
 	Так как $\exists f^{(n)}(x_{0}),$ то $\exists U_{\delta}(x_{0}),$ в которой определена $f^{(n-1)}(x).$
@@ -513,8 +513,8 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	Заметим, что $\phi_{n}(x_{0}) = (x-x_{0})^{n} = 0, \quad r_{x_{0}}^{n} [f](x_{0}) = 0.$ Тогда 
 	
 	$$\cfrac{r_{x_{0}}^{n} [f](x)}{(x-x_{0})^{n}} = \cfrac{r_{x_{0}}^{n} [f](x) - r_{x_{0}}^{n} [f](x_{0})}{\phi_{n}(x) - \phi_{n}(x_{0})} $$
-
-	Так как ${r_{x_{0}}^{n} [f](x)$ дифференцируема $n$ раз, то можно применить \hyperlink{thrm6.3}{теорему Коши о среденем}:
+	
+	Так как $r_{x_{0}}^{n} [f](x)$ дифференцируема $n$ раз, то можно применить \hyperlink{thrm6.3}{теорему Коши о среднем}:
 	
 	$$ \cfrac{r_{x_{0}}^{n} [f](x) - r_{x_{0}}^{n} [f](x_{0})}{\phi_{n}(x) - \phi_{n}(x_{0})} = \cfrac{\Big(r_{x_{0}}^{n} [f]\Big)'(\xi)}{\phi_{n}'(\xi)},\ \textrm{где}\ \xi \in (x, x_{0})
 	$$
