@@ -352,6 +352,14 @@ $ln x := \log_e x$ и называется натуральным логариф
     \end{enumerate}
 \end{note}
 
+
+\sidefig(10 cm)(7 cm)
+{
+\begin{flushleft}
+\input{lectures/approx}
+\end{flushleft}
+}
+{
 \begin{examples} $\ $
 \begin{enumerate}
     \item $\sin x \sim x, \ x\to 0$
@@ -362,6 +370,7 @@ $ln x := \log_e x$ и называется натуральным логариф
     \item $\ln(1+x) \sim x,\ x\to 0$
 \end{enumerate}
 \end{examples}
+}
     
 
 
@@ -511,13 +520,21 @@ $ln x := \log_e x$ и называется натуральным логариф
 \end{definition}
 \begin{definition}
     Пусть $x_{0} \in \R, \ \delta_{0} > 0 \quad x_{0}, x_{0} + h \in U_{\delta_{0}}(x_{0}).$ \textit{Секущей} называется прямая, проходящая через точки $(x_{0}, f(x_{0}))$ и $(x_{0} + h, f(x_{0} + h))$
-
-\textbf{Картинка будет, но потом}
-
-    $y_{\textrm{сек.}} [x_{0}, h](x) = f(x_{0}) + \cfrac{f(x_{0} + h) - f(x_{0})}{h}(x-x_{0})$
-
-    \textit{Геометрический смысл производной}~---~ предельное положение секущей, то есть прямая, тангенс угла наклона которой является пределом тангенсов углов наклона секущих в зависимости от $h$
 \end{definition}
+
+\sidefig(10 cm)(7 cm)
+{
+\begin{flushleft}
+$y_{\textrm{сек.}} [x_{0}, h](x) = f(x_{0}) + \cfrac{f(x_{0} + h) - f(x_{0})}{h}(x-x_{0})$
+\end{flushleft}
+}
+{
+\input{lectures/diff.tex}
+}
+
+\begin{note}
+    \textit{Геометрический смысл производной}~---~ предельное положение секущей, то есть прямая, тангенс угла наклона которой является пределом тангенсов углов наклона секущих в зависимости от $h$
+\end{note}
 
 \begin{definition}
     Пусть $f: U_{\delta_{0}}(x_{0}) \mapsto \R, \ x_{0} \in \R, \delta_{0} > 0.$ Будем говорить, что $f$ \textit{дифференцируема в точке $x_{0},$} если $\exists A \in \R: f(x) = f(x_{0}) + A(x-x_{0}) + o(x-x_{0}), x\to x_{0}$

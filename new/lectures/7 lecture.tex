@@ -127,6 +127,7 @@
 \begin{definition}
     Подпокрытие называется \textit{открытым}, если все $V_{\beta}$ открыты.
 \end{definition}
+\newpage
 \begin{lemma}
     (Лемма Гейне-Бореля) Из любого открытого покрытия компакта $K$ можно выделить конечное подпокрытие (открытое).
 \end{lemma}
@@ -141,7 +142,8 @@
 
     Предположим, что мы построили отрезки $I^{0} \supset \ldots \supset I^{m}$: $|I^{j}| = \frac{1}{2}|I^{j - 1}|$ и в то же время из $\{ V_{\alpha}\}_{\alpha \in I}$ нельзя выделить конечного подпокрытия множества $K \cap I^{j} \ \forall j \in \{ 0, 1, \ldots, m\}.$ На $m + 1$ шаге поделим отрезок $I^{m}$ пополам и выберем ту половину, пересечение которой с $K$ не может быть покрыто конечным поднабором $\{ V_{\alpha}\}_{\alpha \in I}.$ Получили стягивающуюся последовательность вложенных отрезков $\{ I^{m} \}$. Тогда по лемме Кантора $\displaystyle \exists x = \bigcap_{m = 1}^{\infty} I^{m}.$ 
     
-    Поскольку $\displaystyle x \in [a, b] \subset \bigcup_{\alpha \in I} { V_{\alpha}},$ то $\displaystyle \exists \alpha_{0} \in I$: $x \in V_{\alpha_{0}}.$ Так как множество $\displaystyle V_{\alpha_{0}}$ открыто, то $\displaystyle \exists \epsilon > 0$: $\displaystyle U_{\epsilon} (x) \subset V_{\alpha_{0}}.$ Поскольку $\displaystyle |I^{m}| \to 0,$ то $\exists m_{0}$: $\displaystyle |I^{m_{0}}| < \epsilon$. Так как $\displaystyle x \in I^{m_{0}}$ получаем, что $\displaystyle I^{m_{0}} \subset U_{\epsilon} (x) \subset V_{\alpha_{0}}.$ Таким образом, из покрытия $\displaystyle \{ V_{\alpha}\}_{\alpha \in I}$ можно выделить конечное подпокрытие отрезка $I^{m_{0}}$, состоящее из одного множества $V_{\alpha_{0}}$, что противоречит построению $\Rightarrow$ изначальное предположение было неверно.
+    Поскольку $\displaystyle x \in K$ (так как $K$ замкнут и $\forall m \in \N \ x_{m} \in (I_{m} \cap K)$, тогда $\lim\limits_{m \to \infty} x_{m} = x$), а значит $\exists \alpha (x) \in I$: $x \in V_{\alpha (x)}$, но $V_{\alpha (x)}$~---~открытое, то есть $\exists \epsilon > 0$: $U_{\epsilon} (x) \subset U_{\alpha (x)}$. Так как $|I^{m}| \to 0$, $m \to \infty$ и $x \in I^{m} \ \forall m \in \N$, то $\exists m (\epsilon) \in \N$: $I^{m (\epsilon)} \subset U_{\epsilon} (x) \subset V_{\alpha (x)} \Rightarrow I^{m (\epsilon)} \cap K$ покрывается одним $U_{\alpha (x)}$, что противоречит построению, то есть исходное предположение было неверно.
+
 \end{proof}
 \begin{problem}
     Доказать, что если из любого открытого покрытия множества можно выделить конечное подпокрытие, то это множество компакт.

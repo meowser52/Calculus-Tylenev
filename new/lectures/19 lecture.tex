@@ -1,5 +1,5 @@
 \begin{theorem}
-	\hypertarget{thrm7.2}{(Формула Тейлора с остаточным членом в форме Лагранжа)}
+	\hypertarget{thrm5.15}{(Формула Тейлора с остаточным членом в форме Лагранжа)}
 	Пусть $\exists f^{(n+1)}$ в некоторой $U_{\delta}(x_{0})$. Тогда $\forall x\in \mathring{U}_{\delta}(x_{0})$ справедливо равенство
 	
 	$$f(x) = \sum\limits_{k = 0}^n \cfrac{f^{(k)}}{k!}(x-x_{0})^{k} + \cfrac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_{0})^{(n+1)}, \ \textrm{где} \ \xi \in (x_{0}, x).$$
@@ -9,7 +9,7 @@
 	
 	$$r_{x_{0}}^{n} [f](x) = f(x_{0}) - T_{x_{0}}^{n} [f](x)$$
 	
-	Можно применить теорему Коши $n+1$ раз:
+	Можно применить \hyperlink{5.11}{теорему Коши} $n+1$ раз:
 	
 	$$\cfrac{r_{x_{0}}^{n} [f](x)}{\phi_{n+1}(x)} = \cfrac{\Big(r_{x_{0}}^{n} [f]\Big)^{(n+1)}(\xi_{n+1})}{(n+1)!} $$
 	
@@ -19,7 +19,7 @@
 \end{proof}
 
 \begin{theorem}
-	\hypertarget{thrm7.3}{(Теорема о единственности)} Пусть $\exists f^{(n)}(x_{0}) \in \R.$ Тогда, если 
+	\hypertarget{thrm5.16}{(Теорема о единственности)} Пусть $\exists f^{(n)}(x_{0}) \in \R.$ Тогда, если 
 	
 	$f(x) = \sum\limits_{k =0}^{n} a_{k}(x-x_{0})^{k} + o\Big((x-x_{0})^{n}\Big), x \to x_{0},$ то $a_{k} = \cfrac{f^{(k)}(x_{0})}{k!}$
 \end{theorem}
@@ -30,7 +30,7 @@
 \end{example} 
 \end{note}
 \begin{proof}
-	Так как $\exists f^{(n)}(x_{0}) \in \R$, можно воспользоваться \hyperlink{thrm7.1}{формулой Тейлора с остаточным членом в форме Пеано}. Тогда 
+	Так как $\exists f^{(n)}(x_{0}) \in \R$, можно воспользоваться \hyperlink{thrm5.14}{формулой Тейлора с остаточным членом в форме Пеано}. Тогда 
 	
 	$$\begin{cases}
 		f(x) = \sum\limits_{k = 0}^{n} a_{k} (x-x_{0})^{k} +  o\Big((x-x_{0})^{n}\Big) , x \to x_{0}, \\
@@ -52,14 +52,14 @@
 \end{proof}
 
 \begin{theorem}
-	\hypertarget{thrm7.3}{(Почленное дифференцрование формулы Тейлора)} Пусть $n\in \N$ и $\exists f^{(n)}(x_{0}).$ Тогда если $f(x) = \sum\limits_{k =0}^{n} a_{k}(x-x_{0})^{k} + o\Big((x-x_{0})^{n}\Big), x \to x_{0},$ то 
+	\hypertarget{thrm5.17}{(Почленное дифференцрование формулы Тейлора)} Пусть $n\in \N$ и $\exists f^{(n)}(x_{0}).$ Тогда если $f(x) = \sum\limits_{k =0}^{n} a_{k}(x-x_{0})^{k} + o\Big((x-x_{0})^{n}\Big), x \to x_{0},$ то 
 	
 	$$f'(x) = \sum\limits_{k = 1}^{n} a_{k} \cdot k \cdot (x-x_{0})^{k-1} + o\Big((x-x_{0})^{n-1}\Big), x \to x_{0}.$$
 \end{theorem}
 \begin{proof}
-	В силу \hyperlink{thrm7.2}{теоремы о единственности} $a_{k} = \cfrac{f^{(k)}(x_{0})}{k!}$.
+	В силу \hyperlink{thrm5.16}{теоремы о единственности} $a_{k} = \cfrac{f^{(k)}(x_{0})}{k!}$.
 	
-	\hyperlink{thrm7.1}{По формуле Тейлора с остаточным членом в форме Пеано}, примененной к функции $f'$, получим, что $f'(x) = \sum\limits_{k = 0}^{n-1} \cfrac{(f')^{(k)}(x_{0})}{k!} (x-x_{0})^{k} + o\Big((x-x_{0})^{n-1}\Big), x \to x_{0}$
+	\hyperlink{thrm5.14}{По формуле Тейлора с остаточным членом в форме Пеано}, примененной к функции $f'$, получим, что $f'(x) = \sum\limits_{k = 0}^{n-1} \cfrac{(f')^{(k)}(x_{0})}{k!} (x-x_{0})^{k} + o\Big((x-x_{0})^{n-1}\Big), x \to x_{0}$
 	
 	$$
 	j = k+1
@@ -77,15 +77,15 @@
 \end{proof}
 
 \begin{theorem}
-	\hypertarget{thrm7.4}{(Почленное интегрирование формулы Тейлора)} Пусть $\exists f^{(n+1)}(x_{0})$ и 
+	\hypertarget{thrm5.17}{(Почленное интегрирование формулы Тейлора)} Пусть $\exists f^{(n+1)}(x_{0})$ и 
 	
 	$f'(x) = \sum\limits_{k = 0}^{n} b_{k}(x-x_{0})^{k} + o \Big((x-x_{0})^{n}\Big)$. Тогда 
 	$$f(x) = f(x_{0}) + \sum\limits_{k=0}^{n} \cfrac{b_{k}}{k+1} \cdot (x-x_{0})^{k+1} + o\Big((x-x_{0})^{n+1}\Big), x\to x_{0}$$
 \end{theorem}
 \begin{proof}
-	В силу \hyperlink{thrm7.2}{теоремы о единственности} $b_{k} = \cfrac{(f')^{(k)}(x_{0})}{k!}$.
+	В силу \hyperlink{thrm5.16}{теоремы о единственности} $b_{k} = \cfrac{(f')^{(k)}(x_{0})}{k!}$.
 	
-	\hyperlink{thrm7.1}{По формуле Тейлора с остаточным членом в форме Пеано}, примененной к функции $f$, получим, что $f(x) = f(x_{0})+\sum\limits_{k = 1}^{n+1} \cfrac{(f)^{(k)}(x_{0})}{k!} \cdot (x-x_{0})^{k} + o\Big((x-x_{0})^{n+1}\Big), x \to x_{0}$
+	\hyperlink{thrm5.14}{По формуле Тейлора с остаточным членом в форме Пеано}, примененной к функции $f$, получим, что $f(x) = f(x_{0})+\sum\limits_{k = 1}^{n+1} \cfrac{(f)^{(k)}(x_{0})}{k!} \cdot (x-x_{0})^{k} + o\Big((x-x_{0})^{n+1}\Big), x \to x_{0}$
 	
 	$$
 	j = k-1
@@ -112,7 +112,7 @@
 
 \subsection{Разложение основных элементарных функций по формуле Тейлора}
 \begin{definition}
-	Путем сдвига формулы Тейлора с центром в точке $x_{0}$ может быть редуцирована к формуле Тейлора с центром в нуле. Тогда такая формула называется \textit{формулой Маклорена.}  То есть если $\exists f^{(n) }(0) \in \R,$ то 
+	Путем сдвига \hyperlink{def5.13}{формулы Тейлора с центром в точке $x_{0}$} может быть редуцирована к формуле Тейлора с центром в нуле. Тогда такая формула называется \textit{формулой Маклорена.}  То есть если $\exists f^{(n) }(0) \in \R,$ то 
 	
 	$$f(x) = \sum\limits_{k = 0}^{n} \cfrac{f^{(k)}(0)}{k!} \cdot x^{k} + o(x^{n}), x \to 0$$
 \end{definition}
@@ -148,15 +148,23 @@
 \begin{proof}
 	$f$~---~ четная, но $f'$~---~ нечетная, $f''$~---~ четная, $f'''$~---~ нечетная и так далее. Но в силу предыдущей леммы и замечания $f'(0) = f'''(0) = \ldots = f^{(2n+1)}(0) = 0.$ 
 	
-	Значит, \hyperlink{thrm7.1}{по формуле Тейлора с остаточным членом в форма Пеано} $$f(x) = \sum\limits_{j = 0}^{2n+1} \cfrac{f^{(j)}}{j!} x^{j} + o(x^{2n+1}), x\to 0$$
+	Значит, \hyperlink{thrm5.14}{по формуле Тейлора с остаточным членом в форма Пеано} $$f(x) = \sum\limits_{j = 0}^{2n+1} \cfrac{f^{(j)}}{j!} x^{j} + o(x^{2n+1}), x\to 0$$
 	$$= \sum\limits_{k = 0}^{n} \cfrac{f^{(2k)} \cdot x^{2k}}{(2k)!} + o(x^{2n+1}), x\to 0$$
 	
 	Для нечетной доказательство аналогично
 \end{proof}
 
+%\begin{enumerate}
+%    \item $\sh x = \sum\limits_{k = 0}^{n} \cfrac{x^{2k+1}}{(2k+1)!} + o(x^{2n+2}), x\to 0$
+%    \item[] $\ch x = \sum\limits_{k = 0}^{n} \cfrac{x^{2k}}{(2k)!} + o(x^{2n+1}), x\to 0$
+%    \item $\sin x = \sum\limits_{k = 0}^{n} \cfrac{(-1)^{k}}{(2k+1)!} \cdot x^{2k+1} + o(x^{2n+2}), x\to 0$
+%    \item[] $\cos x = \sum\limits_{k = 0}^{n} \cfrac{(-1)^{k}}{(2k)!} \cdot x^{2k} + o(x^{2n+1}), x\to 0$
+%    \item $(1 + x)^{\alpha} = \sum\limits_{k = 0}^{n} C_{\alpha}^{k}x^{k}  + 0(x^{n}), x\to 0,$
+%    \item $ \ln x = \sum\limits_{k = 0}^{n} (-1)^{k} x^{k} + o(x^{n}), x\to 0$
+%\end{enumerate}
+
 \begin{enumerate}
 	\item $(e^{x}^{(n)})(0) = 1$ 
-	
 	$$ \forall n \in \N_{0} \hookrightarrow e^{x} = \sum\limits_{k = 0}^{n} \cfrac{x^{k}}{k!} + o(x^{n}), x\to 0$$
 	
 	\item $(\sh x)^{(j)}(0) = \begin{cases}
