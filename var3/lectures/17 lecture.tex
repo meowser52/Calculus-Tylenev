@@ -143,12 +143,12 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	Пусть $f: [a, b] \mapsto \R$. Пусть $x_{0}$~---~ точка локального минимума (локального максимума).
 	
 	Тогда, если $ \begin{gathered}
-		\exists f'_{+} (x_{0}), \textrm{то}  f'_{+} (x_{0}) \geq 0 \\
-		\exists f'_{-} (x_{0}), \textrm{то}  f'_{-} (x_{0}) \leq 0 \\
+		\exists f'_{+} (x_{0}), \textrm{то} \ f'_{+} (x_{0}) \geq 0 \\
+		\exists f'_{-} (x_{0}), \textrm{то} \ f'_{-} (x_{0}) \leq 0 \\
 		\left(
 		\begin{gathered}
-			\exists f'_{+} (x_{0}), \textrm{то} f'_{+} (x_{0}) \leq 0 \\
-			\exists f'_{-} (x_{0}), \textrm{то} f'_{-} (x_{0}) \geq 0			
+			\exists f'_{+} (x_{0}), \textrm{то} \ f'_{+} (x_{0}) \leq 0 \\
+			\exists f'_{-} (x_{0}), \textrm{то} \ f'_{-} (x_{0}) \geq 0			
 		\end{gathered}
 		\right)
 	\end{gathered}$
@@ -158,7 +158,7 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 	
 	\sidefig(10 cm)(7 cm)	
 	{\begin{flushleft}
-		
+		\normalsize
 		Докажем для случая, когда $x_{0}$~---~ точка локального минимума, так как для локального максимума доказательство аналогично.	
 		
 		Пусь $ \exists f'_{+}(x_{0}) \Rightarrow \exists \lim\limits_{x\to x_{0}+0} \cfrac{f(x)-f(x_{0})}{x - x_{0}}$
@@ -167,9 +167,7 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 		
 		$$\exists \delta > 0: \ f(x)\geq f(x_{0}) \quad \forall x\in U_{\delta}(x_{0}) \cap [a,b]$$
 		
-		А так как берется правсторонний предел, то $x>x_{0}$. Следовательно,
-		$\forall x \in \mathring{U}^{+}_{\delta} (x_{0}) \cap [a, b] \hookrightarrow \cfrac{f(x)-f(x_{0})}{x-x_{0}} \geq 0 
-		$
+		А так как берется правсторонний предел, то $x>x_{0}$. 
 			
 	\end{flushleft}
 	}
@@ -201,7 +199,9 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 		\draw[thin] (4, -0.1) -- (4, 0.1);
 	\end{tikzpicture}
 	}
-	
+
+    Следовательно, $\forall x \in \mathring{U}^{+}_{\delta} (x_{0}) \cap [a, b] \hookrightarrow \cfrac{f(x)-f(x_{0})}{x-x_{0}} \geq 0 $
+ 
 	Следовательно, делая \hyperlink{thm4.8}{предельный переход в неравенстве}, получим $f'_{+} \geq 0$
 	
 	Если $\exists f'_{-}(x_{0}) := \lim\limits_{x\to x_{0}-0} \cfrac{f(x)-f(x_{0})}{x-x_{0}}$, то
@@ -268,6 +268,7 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 
 	\sidefig(10 cm)(7 cm)	
 {\begin{flushleft}
+    \normalsize
 		Предположим, что на малом интервале $x(t)$ обратима и удволетворяет условиям \hyperlink{thrm4.19}{теоремы об обратной функции}
 		$$
 		\begin{gathered}
@@ -420,7 +421,7 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 \begin{definition}
 	Пусть $n \in \N_{0},$ $f: U_{\delta}(x_{0})\mapsto \R$ имеет n-ую (конечную) производную в точке $x_{0}$. Тогда \hypertarget{def5.13}{полиномом (многочленом) Тейлора функции $f$ с центром в точке $x_{0}$} называется
 	
-	$$T_{x_{0}}^{n} [f](x) := \sum\limits_{k = 0}^n \cfrac{f^{(k)}}{k!}(x-x_{0})^{k}.$$ 
+	$$T_{x_{0}}^{n} [f](x) := \sum\limits_{k = 0}^n \cfrac{f^{(k)}(x_{0})}{k!}(x-x_{0})^{k}.$$ 
 \end{definition}
 
 \begin{definition}
@@ -470,7 +471,7 @@ $$y'_{x}(x_{0}) = \cfrac{y'_{t}(t_{0})}{x'_{t}(t_{0})}, \textrm{где} \ t_{0} 
 \begin{theorem}
 	\hypertarget{thrm5.14}{(Формула Тейлора с остаточным членом в форме Пеано)} Путь $f$ дифференцируемо в точке $x_{0} \ n$ раз, $n \in \N_{0.}$ Тогда 
 	
-	$$f(x) = \sum\limits_{k = 0}^n \cfrac{f^{(k)}}{k!}(x-x_{0})^{k} + o\Bigl( (x-x_{0})^{n} \Bigr), x \to x_{0}$$
+	$$f(x) = \sum\limits_{k = 0}^n \cfrac{f^{(k)(x_{0})}}{k!}(x-x_{0})^{k} + o\Bigl( (x-x_{0})^{n} \Bigr), x \to x_{0}$$
 \begin{note}
 	Запись $x\to x_{0}$ означает, что равенство справедливо в некоторой окрестности $U_{\delta}(x_{0})$
 	

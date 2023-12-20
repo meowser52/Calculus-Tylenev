@@ -297,7 +297,7 @@ $ln x := \log_e x$ и называется натуральным логариф
 \end{definition}
 
 \begin{definition}
-    \textit{(Из стандартных книжек)}.
+    \hypertarget{def4.40}{\textit{(Из стандартных книжек)}}.
 
     $f(x) \sim g(x), x\to x_{0},$ если $\exists
      \lim\limits_{x \to x_{0}} \cfrac{f(x)}{g(x)} = 1$, $g (x) \neq 0 \ \forall x \in \R$.
@@ -360,6 +360,7 @@ $ln x := \log_e x$ и называется натуральным логариф
 \end{flushleft}
 }
 {
+\normalsize
 \begin{examples} $\ $
 \begin{enumerate}
     \item $\sin x \sim x, \ x\to 0$
@@ -375,7 +376,7 @@ $ln x := \log_e x$ и называется натуральным логариф
 
 
 \begin{lemma}
-    $x_{0} \in \overline{\R}, \ \delta_{0} > 0 \quad f_{1},\ f_{2},\ g_{1},\ g_{2}: \mathring{U}_{\delta_{0}}(x_{0}) \mapsto \R \leftarrow$ так писать не следует, лучше каждую отдельно.
+    Пусть $x_{0} \in \overline{\R}, \ \delta_{0} > 0 \quad f_{1},\ f_{2},\ g_{1},\ g_{2}$: $\mathring{U}_{\delta_{0}}(x_{0}) \mapsto \R \leftarrow$ но так писать не следует, лучше каждую отдельно.
 
     Пусть $\left\{
     \begin{gathered}
@@ -389,7 +390,7 @@ $ln x := \log_e x$ и называется натуральным логариф
     $f_{i}(x) \sim g_{i}(x), x\to x_{0} \Rightarrow $
     
     $$
-    \Rightarrow \ i =1,2\quad  \exists \theta_{i}(x): \left\{
+    \Rightarrow \ i =1, 2\quad  \exists \theta_{i}(x): \left\{
     \begin{gathered}
         \lim\limits_{x\to x_{0}} \theta_{i}(x) = 1 \hfill \\
         f_{i}(x) = \theta_{i}(x) g_{i}(x) \quad \forall x\in \mathring{U}_{\delta_{0}}(x_{0}), 
@@ -420,8 +421,13 @@ $ln x := \log_e x$ и называется натуральным логариф
 \end{note}
 
 \begin{example}
-    Возьмём $x^{3} + x \sim x + x^{2}$, $x \to 0$ и $x \sim x$, $x \to 0$. Вычтем одно из другого. Неверно, что  $x^{3}\sim x^{2}$, $x\to 0$.   
+    Возьмём $x^{3} + x \sim x + x^{2}$, $x \to 0$ и $x \sim x$, $x \to 0$. 
+    
+    Вычтем одно из другого. Неверно, что  $x^{3}\sim x^{2}$, $x\to 0$. 
 \end{example}
+\begin{note}
+    Эквивалентность исходных функций в $\mathring{U}_{\delta_{0}} (x)$ доказывается легко по \hyperlink{def4.40}{<<книжному>> определению}.
+\end{note}
 
 Замена на эквивалентность позволяет относительно легко вычислять пределы.
 
@@ -442,20 +448,18 @@ $ln x := \log_e x$ и называется натуральным логариф
 \begin{definition}
     (о-малое) Пусть $\delta_{0} > 0, \ x_{0} \in \overline{\R}$. Пусть $f, g: \mathring{U}_{\delta_{0}}(x_{0}) \mapsto \R$.
 
-    Говорят, что $f$ является \textit{бесконечно малой функцией по сравнению с $g$ при $x \to x_{0}$}, и записывается это как $f(x) = o(g(x)), x \to x_{0}$, если $\exists \epsilon: \mathring{U}_{\delta_{0}}(x_{0}) \mapsto \R$ такая что:
+    Говорят, что $f$ является \textit{бесконечно малой функцией по сравнению с $g$ при $x \to x_{0}$}, и записывается это как $f(x) = o(g(x)), x \to x_{0}$, если $\exists \epsilon (x)$: $\mathring{U}_{\delta_{0}}(x_{0}) \mapsto \R$ такая что:
     \begin{enumerate}
-        \item $\epsilon(x) \to 0, x\to x_{0}$
-        \item $f(x) = \epsilon(x)g(x) \quad \forall x \in \mathring{U}_{\delta_{0}}(x_{0})$
+        \item $\epsilon(x) \to 0, x\to x_{0}$;
+        \item $f(x) = \epsilon(x)g(x) \quad \forall x \in \mathring{U}_{\delta_{0}}(x_{0})$.
     \end{enumerate}
 \end{definition}
 \begin{note} 
-    $f(x) = o(g(x)), x \to x_{0}$ необратимо, то есть нельзя писать $o(g(x)) = f(x),$ потому что $o(g(x))$~---~ это не индивидуально взятая функция, а целый класс функций. 
+    $f(x) = o(g(x))$, $x \to x_{0}$ необратимо, то есть нельзя писать $o(g(x)) = f(x)$, потому что $o(g(x))$~---~это не индивидуально взятая функция, а целый класс функций. 
 \end{note}
 
 \begin{lemma}
-    Пусть $\delta_{0} > 0, \ x_{0} \in \overline{\R}$. Пусть $f, g: \mathring{U}_{\delta_{0}}(x_{0}) \mapsto \R$.
-
-    Тогда если $f(x) \sim g(x), x\to x_{0}$, то $f(x) - g(x) = o(g(x)), x\to x_{0}$
+    Пусть $\delta_{0} > 0$, $x_{0} \in \overline{\R}$. Пусть $f, g$: $\mathring{U}_{\delta_{0}}(x_{0}) \mapsto \R$. Тогда если $f(x) \sim g(x), x\to x_{0}$, то $f(x) - g(x) = o(g(x))$, $x\to x_{0}$.
 \end{lemma}
 \begin{proof}
     $$\exists \theta(x): \left\{
@@ -465,17 +469,17 @@ $ln x := \log_e x$ и называется натуральным логариф
     \end{gathered} \right. \Leftrightarrow f(x) - g(x) = (\theta(x) - 1)g(x) \Leftrightarrow 
     $$
     $$\Leftrightarrow 
-    \epsilon(x) = \theta(x) -1 \to 0, \ x\to x_{0}$$
+    \epsilon(x) = \theta(x) -1 \to 0, \ x\to x_{0}.$$
 \end{proof}
 
 \begin{examples} $\ $
         \begin{enumerate}
-        \item $\sin x = x + o(x), \ x\to 0$
-        \item $\cos x = 1 + o(x),\ x\to 0$
-        \item $\tan x = x + o(x),\ x \to 0$
-        \item $\arcsin x = x + o(x),\ x \to 0$
-        \item $e^{x} = 1+x + o(x),\ x\to 0$
-        \item $\ln(1+x) = x + o(x),\ x\to 0$
+        \item $\sin x = x + o(x), \ x\to 0$;
+        \item $\cos x = 1 + o(x),\ x\to 0$;
+        \item $\tan x = x + o(x),\ x \to 0$;
+        \item $\arcsin x = x + o(x),\ x \to 0$;
+        \item $e^{x} = 1+x + o(x),\ x\to 0$;
+        \item $\ln(1+x) = x + o(x),\ x\to 0$.
     \end{enumerate}
 \end{examples}
 
@@ -518,6 +522,7 @@ $ln x := \log_e x$ и называется натуральным логариф
     \cfrac{df}{dx}(x_{0}) = f'(x_{0}) = \lim\limits_{x \to x_{0}} \cfrac{f(x)- f(x_{0})}{x - x_{0}} \in \overline{\R}
     $$
 \end{definition}
+
 \begin{definition}
     Пусть $x_{0} \in \R, \ \delta_{0} > 0 \quad x_{0}, x_{0} + h \in U_{\delta_{0}}(x_{0}).$ \textit{Секущей} называется прямая, проходящая через точки $(x_{0}, f(x_{0}))$ и $(x_{0} + h, f(x_{0} + h))$
 \end{definition}
@@ -527,14 +532,15 @@ $ln x := \log_e x$ и называется натуральным логариф
 \begin{flushleft}
 $y_{\textrm{сек.}} [x_{0}, h](x) = f(x_{0}) + \cfrac{f(x_{0} + h) - f(x_{0})}{h}(x-x_{0})$
 \end{flushleft}
+\normalsize
+\begin{note}
+    \textit{Геометрический смысл производной}~---~ предельное положение секущей, то есть прямая, тангенс угла наклона которой является пределом тангенсов углов наклона секущих в зависимости от $h$
+\end{note}
 }
 {
 \input{lectures/diff.tex}
 }
 
-\begin{note}
-    \textit{Геометрический смысл производной}~---~ предельное положение секущей, то есть прямая, тангенс угла наклона которой является пределом тангенсов углов наклона секущих в зависимости от $h$
-\end{note}
 
 \begin{definition}
     Пусть $f: U_{\delta_{0}}(x_{0}) \mapsto \R, \ x_{0} \in \R, \delta_{0} > 0.$ Будем говорить, что $f$ \textit{дифференцируема в точке $x_{0},$} если $\exists A \in \R: f(x) = f(x_{0}) + A(x-x_{0}) + o(x-x_{0}), x\to x_{0}$

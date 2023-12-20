@@ -1,15 +1,14 @@
 \begin{proposition}
     Пусть $a \in \Hat{\R}, c \geq 1, \   \lim\limits_{n\to \infty} x_{n} = a$. Cледующие условия эквивалентны:
     \begin{enumerate}
-        \item $\forall \epsilon > 0 \  \exists N(\epsilon) \in \N$: $\forall n \geq N(\epsilon) \hookrightarrow |x_{n}| \in U_{\epsilon}(a)$
-        \item $\forall \Tilde{\epsilon} > 0 \  \exists \Tilde{N}(\Tilde{\epsilon}) \in \N$: $\forall n \geq \Tilde{N}(\Tilde{\epsilon}) \hookrightarrow |x_{n}| \in U_{c\Tilde{\epsilon}}(a)$
+        \item $\forall \epsilon > 0 \  \exists N(\epsilon) \in \N$: $\forall n \geq N(\epsilon) \hookrightarrow |x_{n}| \in U_{\epsilon}(a)$ж
+        \item $\forall \epsilon > 0 \  \exists \Tilde{N}(\epsilon) \in \N$: $\forall n \geq \Tilde{N}(\epsilon) \hookrightarrow |x_{n}| \in U_{c\epsilon}(a)$.
     \end{enumerate}
 \end{proposition}
-\newpage
-\begin{proof}
-    Так как $c \geq 1$, то $U_{\epsilon} \subset U_{c\epsilon}$, откуда получаем импликацию $(1)\to (2)$ (при $\Tilde{N} (\epsilon) = N(\epsilon)$)
+\begin{proof}$ \ $
+    Так как $c \geq 1$, то $U_{\epsilon} \subset U_{c\epsilon}$, откуда получаем импликацию $(1)\to (2)$ (при $\Tilde{N} (\epsilon) = N(\epsilon)$).
 
-    Теперь докажем $(2)\to (1)$ если взять $\Tilde{\epsilon} = \epsilon / c$, то $\forall \epsilon > 0 \  N(\epsilon) := \Tilde{N}(\Tilde{\epsilon}) = \Tilde{N}(\epsilon / c)$: $\forall n \geq \Tilde{N}(\epsilon / c) \hookrightarrow x_{n} \in U_{c\Tilde{\epsilon}} (a) = U_{\epsilon} (a).$
+    Теперь докажем $(2)\to (1)$. Так как для любого $\epsilon$, то возьмём $\epsilon / c$, то $\forall \epsilon > 0 \  N(\epsilon) := \Tilde{N}(\epsilon / c)$: $\forall n \geq \Tilde{N}(\epsilon / c) \hookrightarrow x_{n} \in U_{c \epsilon / с} (a) = U_{\epsilon} (a).$
 \end{proof}
 \begin{definition}
     Последовательность $\{ x_{n} \}$ называется \textit{сходящейся}, если она имеет конечный предел. В противном случае она называется \textit{расходящейся}.
