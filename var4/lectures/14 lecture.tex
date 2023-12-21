@@ -570,17 +570,17 @@ $y_{\textrm{сек.}} [x_{0}, h](x) = f(x_{0}) + \cfrac{f(x_{0} + h) - f(x_{0})}
     \end{enumerate}
 \end{problem}
 \begin{solution}
-    1) $\Leftrightarrow \exists A \in \R: f(x) = f(x_{0}) + A(x-x_{0}) + o(x-x_{0}) \to f(x_{0}), \quad  A(x-x_{0}) \to 0, o(x-x_{0}) \to 0, x\to x_{0} \Rightarrow 2)$
+    1) $\Leftrightarrow \exists A \in \R$: $f(x) = f(x_{0}) + A(x-x_{0}) + o(x-x_{0}) \to f(x_{0})$, $ A(x-x_{0}) \to 0$, $o(x-x_{0}) \to 0$, $x\to x_{0} \Rightarrow 2)$.
 
     Из 2) не следует 1). Действительно, дифференцируемость равносильна существованию конечной производной. Следовательно, достаточно предъявить функцию непрерывную в точке, но не имеющую в ней конечной производной. 
     
     Например, $f(x) = |x|$ непрерывна в каждой точке, но в нуле не имеет производной.
 
-    $$f'(0) = \lim\limits \cfrac{f(x) - f(x)}{x}$$
+    $$f'(0) = \lim\limits_{x\to 0} \cfrac{f(x) - f(0)}{x}$$
     $$
-    \cfrac{|x| - 0}{x} = sign x$$
+    \cfrac{|x| - 0}{x} = \text{sign}x.$$
 
-    Но $sign x$ в нуле не имеет предела.
+    Но $\text{sign}x$ в нуле не имеет предела.
     
      \textbf{Ответ:} из 1) следует 2)
 \end{solution}

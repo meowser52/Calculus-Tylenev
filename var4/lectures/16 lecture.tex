@@ -10,7 +10,7 @@
 \end{definition}
 
 \begin{definition}
-    Пусть $f:U^{+}_{\delta} (x_{0}) \mapsto \R.$ Тогда если
+    Пусть $f:U^{+}_{\delta_{0}} (x_{0}) \mapsto \R.$ Тогда если
     $$\exists \lim\limits_{x \to x_{0} +0} \cfrac{f(x) - f(x_{0})}{x-x_{0}} \in \overline{R},$$
 
     то он называется \textit{правосторонней производной функции $f$ в точке $x_{0} \ $} и обозначается $f'_{+}(x_{0})$
@@ -18,7 +18,7 @@
     Аналогично определяется \textit{левосторонняя производная функции $f$ в точке $x_{0} \ $} и обозначается $f'_{-}(x_{0})$
 \end{definition}
 \begin{example}
-    $ f(x) = |x| $
+    Рассмотрим $ f(x) = |x|.$
 
     $$
     f'_{+}(0) = \lim\limits_{x \to +0} \cfrac{|x|}{x} = \lim\limits_{x\to +0} \cfrac{x}{x} = 1;
@@ -29,10 +29,10 @@
 \end{example}
 
 \begin{theorem}
-    Пусть $f$ дифференцируется в точке $x_{0}$. Тогда $f'_{+}(x_{0}) = f'_{-}(x_{0}) \in \R$ 
+    Пусть $f$ дифференцируется в точке $x_{0}$. Тогда $f'_{+}(x_{0}) = f'_{-}(x_{0}) \in \R$. 
 \end{theorem}
 \begin{proof}
-    Запишем определение дифференцируемости функции $f$ в точке $x_{0}$:
+    Функция $f$ дифференцируема в точке $x_{0}$:
     $$
     \exists f'(x_{0}) \in \R \Leftrightarrow \exists \lim\limits_{x \to x_{0} +0}  \cfrac{f(x) - f(x_{0})}{x-x_{0}} = \lim\limits_{x \to x_{0} -0} \cfrac{f(x) - f(x_{0})}{x-x_{0}}.$$
 \end{proof}
